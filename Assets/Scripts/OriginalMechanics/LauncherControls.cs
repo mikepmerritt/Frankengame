@@ -40,6 +40,8 @@ public class LauncherControls : MonoBehaviour
         if(!RocketActive) {
             float horizontal = Input.GetAxisRaw("Horizontal");
             transform.position += new Vector3((horizontal * LauncherSpeed.value) * Time.deltaTime, 0, 0);
+            Rocket.transform.position = new Vector3(transform.position.x, Rocket.transform.position.y, Rocket.transform.position.z);
+            Flare.transform.position = new Vector3(transform.position.x, Flare.transform.position.y, Flare.transform.position.z);
         }
     }
 }

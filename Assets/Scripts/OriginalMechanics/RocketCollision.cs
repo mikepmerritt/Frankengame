@@ -40,7 +40,7 @@ public class RocketCollision : MonoBehaviour
     }
 
     // track launcher position
-    private void ReloadRocketInLauncher() {
+    public void ReloadRocketInLauncher() {
         if(!LauncherControls.RocketActive && LaunchPosition != Vector3.zero) { // if the rocket is not deployed
             LaunchPosition = new Vector3(Launcher.transform.position.x, LaunchPosition.y, LaunchPosition.z);
             transform.position = LaunchPosition;

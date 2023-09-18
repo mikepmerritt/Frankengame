@@ -35,7 +35,7 @@ public class FlareCollision : MonoBehaviour
     }
 
     // track launcher position
-    private void ReloadFlareInLauncher() {
+    public void ReloadFlareInLauncher() {
         if(!LauncherControls.RocketActive && LaunchPosition != Vector3.zero) { // if the rocket is not deployed
             LaunchPosition = new Vector3(Launcher.transform.position.x, LaunchPosition.y, LaunchPosition.z);
             transform.position = LaunchPosition;
